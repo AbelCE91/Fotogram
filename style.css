@@ -1,0 +1,367 @@
+body{
+    margin: 0px;
+    padding: 0;
+    background-color: rgb(0, 0, 51);
+    width: 100%;
+    height: 100vh;
+    font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+    
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 9, 51, 0.548);
+    position: absolute;
+    display: none;
+    z-index: 1;
+    
+}
+
+/*header*/
+
+
+.header{
+    
+    background-color: rgb(0, 0, 104);
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    height: 100px;
+   margin-left: 40px;
+ 
+}
+
+.logo-text{
+    font-size: 40px;
+    padding-left: 10px;
+    color:white;
+
+}
+
+
+/*main*/
+main{
+   width: 100%;
+   height: 100vh;
+}
+
+.title{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.galerie{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    gap:50px;
+ 
+}
+.galerie img{
+    
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+  
+
+}
+.galerie img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+    box-shadow: 5px 5px 20px rgb(0, 55, 158);
+}
+
+.bigImage{
+    width: 600px;
+    max-height:400px ;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+   
+}
+
+.dialog{
+    background-color: rgb(0, 2, 99);
+    align-items: center;
+    border-radius: 20px;
+    max-width: 700px;
+    max-height: 700px;
+    border-color: black;
+    outline: none; 
+
+}
+.buttons{
+ width: 40px;
+ padding-bottom: 20px;
+ padding-top: 20px;
+
+}
+
+.buttons:hover{
+    transform: scale(1.2);
+
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-around;
+}
+.delete-img{
+    width: 40px;
+}
+.delete-img:hover{
+  transform: scale(1.2);
+}
+.img-name{
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+.counter{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 104);
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    box-shadow: 5px 5px 5px 15px rgba(0, 0, 0, 0.5);
+  
+}
+
+.links{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    padding-left: 20px;
+
+}
+.links:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:1350px){
+    .galerie{
+        margin-left:150px;
+    }
+}
+
+@media(max-width:1189px){
+    .footer{
+        margin-top: 250px;
+    }
+}
+
+@media(max-width:1173px){
+    .galerie{
+       padding-left:60px;
+    }
+}
+@media(max-width:1063px){
+    .galerie{
+       padding-left:40px;
+    }
+}
+@media(max-width:1021px){
+    .galerie{
+        padding-left: 0px;
+    }
+}
+@media(max-width:890px){
+    .galerie{
+        margin-left: 120px;
+    }
+}
+
+
+@media(max-width:790px){
+    .galerie{
+        margin-left: 100px;
+    }
+
+}
+@media(max-width:776px){
+    .footer{
+        margin-top:1250px;
+    }
+    .dialog{
+        max-width: 500px;
+    }
+
+    .bigImage{
+        width: 400px;
+    }
+  
+}
+@media(max-width:776px){
+    .galerie{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+}
+@media(max-width:710px){
+    .galerie{
+        margin-left: 60px;
+    }
+}
+@media(max-width:550px){
+       .dialog{
+        max-width: 400px;
+    }
+
+    .bigImage{
+        width: 400px;
+        margin: 0px;
+    }
+    .buttons{
+     width: 20px;
+     padding-bottom: 10px;
+     padding-top: 10px;
+    }
+   .delete-img{
+    width: 20px;
+    }
+    .img-name{
+    padding:0px;
+    margin-block: 0px;
+    margin-bottom: 10px;
+    }
+}
+
+
+
+@media(max-width:450px){
+    .links{
+        font-size: 15px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .logo-text{
+        font-size: 20px;
+    }
+    .logo{
+        height: 50px;
+    }
+      .dialog{
+        max-width: 350px;
+    }
+
+    .bigImage{
+        width: 350px;
+        margin: 0px;
+    }
+    .galerie img{
+        width: 200px;
+       height: 150px;
+    }
+    .footer{
+        margin-top: 800px;
+    }
+    
+}
+@media(max-width:430px){
+    .footer{
+        margin-top: 950px;
+    }
+    .galerie{
+        margin-left:43px;
+    }
+        
+}
+@media(max-width:400px){
+      .dialog{
+        max-width: 300px;
+    }
+
+    .bigImage{
+        width: 300px;
+        margin: 0px;
+    }
+}
+@media(max-height:667px){
+        .footer{
+            margin-top: 1200px;
+
+        }
+    }
+   
+
+@media(max-width:410px){
+    .galerie{
+        margin-left: 40px;
+    }
+}
+@media(max-width:350px){
+    .galerie{
+        margin-left: 30px;
+    }
+        .dialog{
+        max-width: 280px;
+    }
+
+    .bigImage{
+        width: 250px;
+        margin: 0px;
+    }
+
+
+}
+
+@media(max-height:430px){
+    .footer{
+        margin-top:900px;
+    }
+      
+    .dialog{
+        max-width:450px ;
+        max-height: 350px;
+    }
+    .bigImage{
+        width: 400px;
+        max-height: 240px;
+        margin: 0px;
+    }
+    .delete-img{
+    width: 20px;
+    }
+        .buttons{
+     width: 20px;
+     padding:0;
+    margin-block:0;
+        }
+          .img-name{
+    padding:0px;
+    margin-block: 0px;
+    margin-bottom: 10px;
+    }
+    .counter{
+        margin-block: 0;
+       
+    }
+
+}
