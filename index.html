@@ -1,62 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet" />
   </head>
-    <body>
-     
-      <header class="header">
-        <img class="logo" src="./img/logo.png" alt="">
-        <p class="logo-text">Fotogram</p>
-      </header>
+  <body>
+    <header class="header">
+      <img class="logo" src="./img/logo.png" alt="Logo Fotogram" />
+      <p class="logo-text">Fotogram</p>
+    </header>
 
-        <main>
-         <h1 class="title">Abel´s personal photogram</h1>
-       
-          <figure class="galerie"> 
-             <img onclick="opendialog(0)" src="img/bogota.jpg" alt="img-galerie">
-             <img onclick="opendialog(1)" src="img/caribe.jpg" alt="img-galerie">
-             <img onclick="opendialog(2)" src="img/montana.jpg" alt="img-galerie">
-             <img onclick="opendialog(3)" src="img/maya.jpg" alt="img-galerie">
-             <img onclick="opendialog(4)" src="img/paisaje-nieve.jpg" alt="img-galerie">
-             <img onclick="opendialog(5)" src="img/paisaje-tarde.jpg" alt="img-galerie">
-             <img onclick="opendialog(6)" src="img/san blas.jpg" alt="img-galerie">
-             <img onclick="opendialog(7)" src="img/sombrillas.jpg" alt="img-galerie">
-          </figure>
-         
-           <dialog class="dialog"  id="myDialog">
-        
-            <header>  
-              <img class="delete-img" onclick="closeDialog()" src="./img/delete.png" alt="">
-            </header>
-            <section>
-               <h2 class="img-name" id="imgName"></h2>
-               <img class="bigImage" id="fulimg" src="./img/bogota.jpg" alt="">
-               <p class="counter" id="imgCounter"></p>
-            </section>
-              <footer class="button-container">
-                <img class="buttons" onclick="backImge()" src="./img/izquierda.png" alt="">
-                <img class="buttons" onclick="nextImage()" src="./img/derecha.png" alt="">
-              </footer> 
-           </dialog>
+    <main>
+      <h1 class="title">Abel´s personal photogram</h1>
 
-           <div id="overlay" class="overlay"></div>      
-        </main>
+      <figure class="galerie">
+        <img onclick="opendialog(0)" src="img/bogota.jpg" alt="Bogotá" tabindex="0"/>
+        <img onclick="opendialog(1)" src="img/caribe.jpg" alt="Caribe" tabindex="0"/>
+        <img onclick="opendialog(2)" src="img/montana.jpg" alt="Montaña" tabindex="0"/>
+        <img onclick="opendialog(3)" src="img/maya.jpg" alt="Maya" tabindex="0"/>
+        <img onclick="opendialog(4)" src="img/paisaje-nieve.jpg" alt="Paisaje de nieve" tabindex="0" />
+        <img onclick="opendialog(5)" src="img/paisaje-tarde.jpg" alt="Paisaje al atardecer" tabindex="0"/>
+        <img onclick="opendialog(6)" src="img/san blas.jpg" alt="San Blas "tabindex="0" />
+        <img onclick="opendialog(7)" src="img/sombrillas.jpg" alt="Sombrillas" tabindex="0"/>
+      </figure>
+    </main>
 
-         <footer class="footer">
-            <nav>
-              <a class="links" href="impressum.html">Impressum</a>
-              <a class="links" href="datenschuzt.html">Datenschutz</a>
-            </nav>
-         </footer>
-      
-         <script src="script.js"></script>
-    </body>
-  
+
+
+    <footer class="footer">
+      <nav>
+        <a class="links" href="impressum.html">Impressum</a>
+        <a class="links" href="datenschuzt.html">Datenschutz</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
