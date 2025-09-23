@@ -11,18 +11,18 @@ const pictures = [
 
 const imageName = [
     "Bogota",
-    "Caribe",
-    "Montana",
+    "Caribean",
+    "Mountain",
     "Maya",
-    "Paisaje nieve",
-    "Paisaje tarde",
+    "Snow landscape",
+    "Sunset",
     "San blas",
-    "Sombrillas"
+    "Umbrella"
   ]
-let dialogRef = document.getElementById("myDialog");
+
 const contadorIMG = pictures.length;
 let actualIndex = 0;
-
+let dialogRef = document.getElementById("myDialog");
 
 if (!document.getElementById("myDialog")) {
   const dialogHTML = `
@@ -48,7 +48,7 @@ if (!document.getElementById("myDialog")) {
   dialogRef.addEventListener("click", (event) => {
     if (event.target === dialogRef) {
       closeDialog();
-    }
+      }
   });
 }
 
@@ -85,5 +85,6 @@ function backImge() {
   document.getElementById("imgName").textContent = imageName[actualIndex];
   document.getElementById("imgCounter").textContent = `${actualIndex + 1} / ${pictures.length}`;
 }
+
 
 
