@@ -7,7 +7,7 @@ const pictures = [
   "img/paisaje-tarde.jpg",
   "img/san blas.jpg",
   "img/sombrillas.jpg"
-  ]
+]
 
 const imageName = [
     "Bogota",
@@ -18,22 +18,38 @@ const imageName = [
     "Sunset",
     "San blas",
     "Umbrella"
-  ]
+]
 
-const contadorIMG = pictures.length;
-let actualIndex = 0;
+
 let dialogRef = document.getElementById("myDialog");
+function note(params) {
+  
+}
+
 
 if (!document.getElementById("myDialog")) {
-  const dialogHTML = `
+  const dialogHTML = myDialogHTML()
+
+  document.body.insertAdjacentHTML("beforeend", dialogHTML);
+  dialogRef = document.getElementById("myDialog");
+
+  dialogRef.addEventListener("click", (event) => {
+    if (event.target === dialogRef) {
+      closeDialog();
+    }
+  });
+}
+
+function myDialogHTML() {
+  return `
     <dialog class="dialog" id="myDialog">
       <header>
         <img class="delete-img" onclick="closeDialog()" src="./img/delete.png" alt="Cerrar diálogo" />
       </header>
       <section>
         <h2 class="img-name" id="imgName"></h2>
-         <img class="bigImage" id="fulimg" src="" alt="Imagen ampliada" />
-         <p class="counter" id="imgCounter"></p>
+        <img class="bigImage" id="fulimg" src="" alt="Imagen ampliada" />
+        <p class="counter" id="imgCounter"></p>
       </section>
       <footer class="button-container">
         <img class="buttons" onclick="backImge()" src="./img/izquierda.png" alt="Anterior" />
@@ -41,17 +57,11 @@ if (!document.getElementById("myDialog")) {
       </footer>
     </dialog>
     <div id="overlay" class="overlay"></div>
-  `;
-
-  document.body.insertAdjacentHTML("beforeend", dialogHTML);
-  dialogRef = document.getElementById("myDialog");
-  dialogRef.addEventListener("click", (event) => {
-    if (event.target === dialogRef) {
-      closeDialog();
-      }
-  });
+  `;   
 }
-
+  
+  const contadorIMG = pictures.length;
+  let actualIndex = 0;
            
 /*open dialog*/
 function opendialog(index) {
@@ -61,14 +71,16 @@ function opendialog(index) {
   document.getElementById("imgName").textContent = imageName[actualIndex];
   document.getElementById("imgCounter").textContent = `${actualIndex + 1} / ${pictures.length}`;
   document.getElementById("myDialog").showModal();
-
+  document.body.classList.add("no-scroll");
 }
+
 /*close dialog*/
 function closeDialog(){
-  dialogRef.close()
   document.getElementById("imgName").textContent = imageName[actualIndex];
   document.getElementById("overlay").style.display = "none";
-  }
+  document.body.classList.remove("no-scroll");
+  dialogRef.close()
+}
 
 /*Next image*/
 function nextImage() {
