@@ -20,12 +20,7 @@ const imageName = [
     "Umbrella"
 ]
 
-
 let dialogRef = document.getElementById("myDialog");
-function note(params) {
-  
-}
-
 
 if (!document.getElementById("myDialog")) {
   const dialogHTML = myDialogHTML()
@@ -59,9 +54,9 @@ function myDialogHTML() {
     <div id="overlay" class="overlay"></div>
   `;   
 }
-  
-  const contadorIMG = pictures.length;
-  let actualIndex = 0;
+
+const contadorIMG = pictures.length;
+let actualIndex = 0;
            
 /*open dialog*/
 function opendialog(index) {

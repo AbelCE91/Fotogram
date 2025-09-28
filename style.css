@@ -56,6 +56,7 @@ body{
 /*main*/
 main{
    width: 100%;
+   height: 100vh;
    
 }
 
@@ -67,12 +68,12 @@ main{
 }
 
 .galerie{
-    width: 80%;
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    margin-left: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-left: 120px;
+    margin-top: 200px;
+    
     gap:50px;
  
 }
@@ -172,28 +173,35 @@ main{
     text-decoration: underline;
 }
 
-@media(max-width:1350px){
-    .galerie{
-        margin-left:150px;
-    }
-}
 
-@media(max-width:1189px){
+
+@media(max-width:1510px){
     .footer{
-        margin-top: 250px;
+        margin-top: 220px;
     }
 }
 
 @media(max-width:1173px){
     .galerie{
-       padding-left:60px;
+       margin-right: 80px;
     }
+}
+@media(max-width:1140px){
+    .galerie{
+       padding-left:120px;
+      align-items: center;
+    }
+    .footer{
+        margin-top: 350px;
+    }
+    
 }
 @media(max-width:1063px){
     .galerie{
        padding-left:40px;
     }
 }
+
 @media(max-width:1021px){
     .galerie{
         padding-left: 0px;
@@ -201,21 +209,27 @@ main{
 }
 @media(max-width:890px){
     .galerie{
-        margin-left: 120px;
+        margin-left: 160px;
     }
 }
-
-
-@media(max-width:790px){
+@media(max-width:851px){
     .galerie{
-        margin-left: 100px;
+        margin-left: 270px;
     }
-
-}
-@media(max-width:776px){
     .footer{
-        margin-top:1250px;
+        margin-top: 1400px;
     }
+    .header{
+        justify-content: center;
+        
+    }
+    .logo{
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:776px){
+  
     .dialog{
         max-width: 500px;
         min-height: 500px;
@@ -225,28 +239,32 @@ main{
        max-width: 350px;
         min-height: 300px;
     }
-  
-    main{
-        height: 100vh;
-    }
+   
 }
-@media(max-width:776px){
-    .galerie{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-       
-    }
-}
+
 @media(max-width:710px){
     .galerie{
-        margin-left: 60px;
+        margin-left: 200px;
+    }
+}
+
+@media(max-width:410px){
+    .galerie{
+        margin-left: 40px;
+    }
+}
+
+@media(max-width:650px){
+    .galerie{
+        margin-left: 150px;
     }
 }
 @media(max-width:550px){
        .dialog{
         max-width: 400px;
+    }
+    .galerie{
+        margin-left: 120px;
     }
 
     .bigImage{
@@ -296,19 +314,23 @@ main{
        height: 150px;
     }
     .footer{
-        margin-top: 800px;
+        margin-top: 1000px;
     }
     
 }
 @media(max-width:430px){
     .footer{
-        margin-top: 950px;
+        margin-top: 1000px;
     }
     .galerie{
-        margin-left:43px;
+        margin-left: 100px;
     }
         
 }
+
+
+
+
 @media(max-width:400px){
       .dialog{
         max-width: 300px;
@@ -322,23 +344,31 @@ main{
     .dialog{
         min-height: unset;
     }
-}
-@media(max-height:667px){
-        .footer{
-            margin-top: 1200px;
 
-        }
-    }
+    
+}
+
    
-
-@media(max-width:410px){
-    .galerie{
-        margin-left: 40px;
-    }
+@media(max-width:375px){
+.footer{
+    margin-top: 1300px;
 }
+.galerie{
+    margin-left: 90px;
+    margin-top: 100px;
+}
+
+}
+@media(max-width:370px){
+.footer{
+    margin-top: 1000px;
+}
+
+}
+
 @media(max-width:350px){
     .galerie{
-        margin-left: 30px;
+        margin-left: 65px;
     }
         .dialog{
         max-width: 280px;
